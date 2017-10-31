@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start-dev": "nodemon index.js"
+  },
   "dependencies": {
+    "babel-preset-es2015": "6.3.13",
+    "babel-register": "6.3.13",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7",
     "restify": "^6.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
