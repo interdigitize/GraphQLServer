@@ -1,10 +1,10 @@
-const {
+import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLSchema,
   GraphQLList,
   GraphQLInt
-} = require('graphql');
+} from 'graphql';
 
 let count = 0;
 let title = 'a name';
@@ -16,7 +16,7 @@ let schema = new GraphQLSchema({
       count: {
         type: GraphQLInt,
         description: 'the count',
-        resolve: function() {
+        resolve() {
           return count;
         }
       },
@@ -35,14 +35,14 @@ let schema = new GraphQLSchema({
       incrementCount: {
         type: GraphQLInt,
         description: 'Increments the count',
-        resolve: function() {
+        resolve() {
           return ++count;
         }
       },
       decrementCount: {
         type: GraphQLInt,
         description: 'Decrements the count',
-        resolve: function() {
+        resolve() {
           return --count;
         }
       }
